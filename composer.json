@@ -1,0 +1,34 @@
+{
+    "name": "jason-guru/webhooksigner",
+    "description": "Reusable webhook signer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "G. Jason Sharma",
+        "email": "g.jason.sharma@gmail.com"
+        }
+    ],
+    "require": {
+        "orchestra/testbench": "4.x",
+        "phpunit/phpunit": "^8.5.8|^9.3.3",
+        "spatie/laravel-webhook-server": "1.x",
+        "laravel/framework": "^6.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "JasonGuru\\WebhookSigner\\": "src",
+            "JasonGuru\\WebhookSigner\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JasonGuru\\WebhookSigner\\WebhookSignerServiceProvider"
+            ]
+        },
+        "aliases": {
+            "WebhookSigner": "JasonGuru\\WebhookSigner\\Facades\\WebhookSigner"
+        }
+    }
+}
